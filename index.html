@@ -558,8 +558,9 @@
   <script src="js/main.js"></script>
   <script>
       const url = new URL(window.location.href);
-      const uuid = url.searchParams.get('uuid');
-      document.getElementById('main-img').src = `http://localhost:9906/raw/${uuid}`;
+      const uuid = url.searchParams.get('Uuid');
+      const authToken = url.searchParams.get('AuthToken');
+      document.getElementById('main-img').src = `http://127.0.0.1:9906/v1/content/raw?Uuid=${uuid}&AuthToken=${authToken}`;
   </script>
 </body>
 </html>
